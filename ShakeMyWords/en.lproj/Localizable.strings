@@ -1,0 +1,15 @@
+/* Localized versions of Info.plist keys */
+
+"game.needs.at.least" = "The game needs at least %d words!";
+"attention" = "Attention";
+"delete" = "Delete";
+"next" = "Next";
+"error" = "Error";
+"french" = "french";
+"english" = "english";
+"the.answer.was" = "The answer was:";
+"game.over" = "Game Over";
+"success.rate" = "Success rate: %.2f%%";
+"word.has.already.been.saved" = "%@ has already been saved!";
+"error.raised" = "An error has been raised!";
+"fields.can.not.be.empty" = "Both fields can not be empty!";

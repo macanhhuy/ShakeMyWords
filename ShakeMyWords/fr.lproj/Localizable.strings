@@ -1,0 +1,15 @@
+/* Localized versions of Info.plist keys */
+
+"game.needs.at.least" = "Ce jeu nécessite au moins %d mots !";
+"attention" = "Attention";
+"delete" = "Supprimer";
+"next" = "Suivant";
+"error" = "Erreur";
+"french" = "français";
+"english" = "anglais";
+"the.answer.was" = "La réponse était :";
+"game.over" = "Le jeu est terminé";
+"success.rate" = "%.2f%% de bonne réponses";
+"word.has.already.been.saved" = "%@ a déjà été sauvegardé !";
+"error.raised" = "Une erreur has been raised!";
+"fields.can.not.be.empty" = "les champs ne peuvent être vide !";
