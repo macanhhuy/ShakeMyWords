@@ -237,15 +237,15 @@
                         <color key="backgroundColor" red="0.9450981021" green="0.94117653369999998" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="WCW-Nm-n44" firstAttribute="top" secondItem="nva-d1-Ur6" secondAttribute="top" constant="11" id="2sr-fK-UUT"/>
                             <constraint firstItem="5eB-zt-ogA" firstAttribute="top" secondItem="UJc-9f-Hjv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3Q4-CC-aA7"/>
-                            <constraint firstAttribute="trailing" secondItem="WCW-Nm-n44" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Iqh-vK-Nik"/>
+                            <constraint firstItem="WCW-Nm-n44" firstAttribute="top" secondItem="nva-d1-Ur6" secondAttribute="top" constant="22" id="4kC-A0-Rz6"/>
                             <constraint firstAttribute="trailing" secondItem="78b-95-oyM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OgE-Vk-dh3"/>
                             <constraint firstAttribute="bottom" secondItem="iyI-zv-fbI" secondAttribute="bottom" constant="252" type="user" id="OwG-r3-Sr6"/>
                             <constraint firstItem="iyI-zv-fbI" firstAttribute="leading" secondItem="nva-d1-Ur6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PwX-et-Khd"/>
                             <constraint firstItem="UJc-9f-Hjv" firstAttribute="top" secondItem="nva-d1-Ur6" secondAttribute="top" constant="17" id="Q3e-Vh-cBT"/>
                             <constraint firstAttribute="trailing" secondItem="kj2-ci-BsU" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="TGJ-b0-DwB"/>
                             <constraint firstAttribute="trailing" secondItem="iyI-zv-fbI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Tal-Pf-1Uo"/>
+                            <constraint firstItem="WCW-Nm-n44" firstAttribute="centerX" secondItem="5eB-zt-ogA" secondAttribute="centerX" type="default" id="UYN-2m-uY5"/>
                             <constraint firstAttribute="trailing" secondItem="5eB-zt-ogA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aUN-bj-vOl"/>
                             <constraint firstItem="kj2-ci-BsU" firstAttribute="leading" secondItem="nva-d1-Ur6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bfX-g5-HKJ"/>
                             <constraint firstAttribute="bottom" secondItem="78b-95-oyM" secondAttribute="bottom" constant="30" id="bg1-lj-nUZ"/>

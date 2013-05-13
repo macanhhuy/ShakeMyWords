@@ -43,7 +43,7 @@
     // Fonts used
     UIFont *font = [UIFont fontWithName:FONT_LATO_REGULAR size:34];
     self.wordToGuessLabel.font = [UIFont fontWithName:FONT_LATO_BOLD size:40];
-    self.progressLabel.font = [UIFont fontWithName:FONT_LATO_REGULAR size:13];    
+    self.progressLabel.font = [UIFont fontWithName:FONT_LATO_REGULAR size:15];
     
     // Set up every buttons
     for (UIButton * button in self.possibilities) {
