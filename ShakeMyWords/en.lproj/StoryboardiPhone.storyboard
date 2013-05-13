@@ -589,7 +589,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.28235294119999998" green="0.2784313725" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                 <connections>
                                     <outlet property="delegate" destination="l20-oV-Rzq" id="gkI-Tc-Ste"/>
                                 </connections>
@@ -598,7 +598,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.28235294119999998" green="0.2784313725" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="l20-oV-Rzq" id="Gn3-OP-Fpf"/>
                                 </connections>
@@ -810,79 +810,6 @@
         <image name="cross.png" width="32" height="32"/>
         <image name="valid@2x.png" width="64" height="64"/>
     </resources>
-    <classes>
-        <class className="AddWordViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWordViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelAddAction:" candidateClass="UIButton"/>
-                <relationship kind="action" name="saveWordAction:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="addLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstLanguageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstLanguageTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="secondLanguageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="secondLanguageTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="GameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="action" name="checkChoice:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="progressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wordToGuessLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="possibilities" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="scoresButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wordsButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ScoresTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresTableViewController.h"/>
-        </class>
-        <class className="ScoresViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleScoresLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="action" name="switchLanguages:"/>
-                <relationship kind="outlet" name="choiceLanguagesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstLanguageButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="secondLanguageButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="roundsButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="WordViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordViewCell.h"/>
-        </class>
-        <class className="WordViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="numberWordsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleWords" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="WordsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordsTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C804534E17415FFD00C31010 /* ZAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C804534D17415FFD00C31010 /* ZAlertView.m */; };
 		C82251851738902200EE08D3 /* words.csv in Resources */ = {isa = PBXBuildFile; fileRef = C82251841738902200EE08D3 /* words.csv */; };
 		C82251881738996100EE08D3 /* WordsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C82251871738996100EE08D3 /* WordsParser.m */; };
 		C86A3F4717381D150093C1C7 /* arrow_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C86A3F4317381D150093C1C7 /* arrow_back.png */; };
@@ -38,7 +39,6 @@
 		C87E4B6E17333C3A005AC240 /* StoryboardiPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87E4B7017333C3A005AC240 /* StoryboardiPhone.storyboard */; };
 		C87E9EE317235430009CC2DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87E9EE217235430009CC2DA /* QuartzCore.framework */; };
 		C888F610173C3FCB006E9A81 /* WordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C888F60F173C3FCB006E9A81 /* WordViewCell.m */; };
-		C888F613173C4009006E9A81 /* SimplePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = C888F612173C4009006E9A81 /* SimplePopupView.m */; };
 		C888F61A173C4047006E9A81 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = C888F615173C4047006E9A81 /* Language.m */; };
 		C888F61B173C4047006E9A81 /* Statistic.m in Sources */ = {isa = PBXBuildFile; fileRef = C888F617173C4047006E9A81 /* Statistic.m */; };
 		C888F61C173C4047006E9A81 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = C888F619173C4047006E9A81 /* Word.m */; };
@@ -83,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C804534C17415FFD00C31010 /* ZAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAlertView.h; path = Views/ZAlertView.h; sourceTree = "<group>"; };
+		C804534D17415FFD00C31010 /* ZAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAlertView.m; path = Views/ZAlertView.m; sourceTree = "<group>"; };
 		C82251841738902200EE08D3 /* words.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.csv; sourceTree = "<group>"; };
 		C82251861738996100EE08D3 /* WordsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordsParser.h; path = Classes/WordsParser.h; sourceTree = "<group>"; };
 		C82251871738996100EE08D3 /* WordsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordsParser.m; path = Classes/WordsParser.m; sourceTree = "<group>"; };
@@ -122,8 +124,6 @@
 		C87E9EE217235430009CC2DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C888F60E173C3FCB006E9A81 /* WordViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordViewCell.h; path = Views/WordViewCell.h; sourceTree = "<group>"; };
 		C888F60F173C3FCB006E9A81 /* WordViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordViewCell.m; path = Views/WordViewCell.m; sourceTree = "<group>"; };
-		C888F611173C4009006E9A81 /* SimplePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimplePopupView.h; path = Views/SimplePopupView.h; sourceTree = "<group>"; };
-		C888F612173C4009006E9A81 /* SimplePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimplePopupView.m; path = Views/SimplePopupView.m; sourceTree = "<group>"; };
 		C888F614173C4047006E9A81 /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Language.h; path = Models/Language.h; sourceTree = "<group>"; };
 		C888F615173C4047006E9A81 /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Language.m; path = Models/Language.m; sourceTree = "<group>"; };
 		C888F616173C4047006E9A81 /* Statistic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Statistic.h; path = Models/Statistic.h; sourceTree = "<group>"; };
@@ -207,6 +207,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8282210174172E20061337B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C82251861738996100EE08D3 /* WordsParser.h */,
+				C82251871738996100EE08D3 /* WordsParser.m */,
+				C888F622173C40F3006E9A81 /* Constants.h */,
+				C888F623173C40F3006E9A81 /* Constants.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		C843F077171F5AB700BA0C13 /* Words */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,8 +249,6 @@
 				C888F63B173C4228006E9A81 /* ListWords.m */,
 				C888F63C173C4228006E9A81 /* Round.h */,
 				C888F63D173C4228006E9A81 /* Round.m */,
-				C82251861738996100EE08D3 /* WordsParser.h */,
-				C82251871738996100EE08D3 /* WordsParser.m */,
 			);
 			name = ShakeMyWords;
 			sourceTree = "<group>";
@@ -279,8 +288,8 @@
 		C84B20BC172EEEF4004DF5A4 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
-				C888F611173C4009006E9A81 /* SimplePopupView.h */,
-				C888F612173C4009006E9A81 /* SimplePopupView.m */,
+				C804534C17415FFD00C31010 /* ZAlertView.h */,
+				C804534D17415FFD00C31010 /* ZAlertView.m */,
 			);
 			name = Popups;
 			sourceTree = "<group>";
@@ -394,10 +403,9 @@
 		C8B60D79171B5F340013C91D /* ShakeMyWords */ = {
 			isa = PBXGroup;
 			children = (
+				C8282210174172E20061337B /* Classes */,
 				C8B60D82171B5F340013C91D /* AppDelegate.h */,
 				C8B60D83171B5F340013C91D /* AppDelegate.m */,
-				C888F622173C40F3006E9A81 /* Constants.h */,
-				C888F623173C40F3006E9A81 /* Constants.m */,
 				C8B60DBB171B689F0013C91D /* Controllers */,
 				C8B60DB5171B63F30013C91D /* Models */,
 				C8B60D8B171B5F340013C91D /* ShakeMyWords.xcdatamodeld */,
@@ -629,7 +637,6 @@
 				C82251881738996100EE08D3 /* WordsParser.m in Sources */,
 				C8BB3E07173B6ED3006DD416 /* ZCSVParser.m in Sources */,
 				C888F610173C3FCB006E9A81 /* WordViewCell.m in Sources */,
-				C888F613173C4009006E9A81 /* SimplePopupView.m in Sources */,
 				C888F61A173C4047006E9A81 /* Language.m in Sources */,
 				C888F61B173C4047006E9A81 /* Statistic.m in Sources */,
 				C888F61C173C4047006E9A81 /* Word.m in Sources */,
@@ -646,6 +653,7 @@
 				C888F643173C4249006E9A81 /* SettingsViewController.m in Sources */,
 				C888F646173C4264006E9A81 /* GameViewController.m in Sources */,
 				C888F649173C451A006E9A81 /* UIColor+ZColor.m in Sources */,
+				C804534E17415FFD00C31010 /* ZAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

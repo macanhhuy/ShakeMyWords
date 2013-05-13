@@ -18,7 +18,7 @@
 #import "UIButton+ZButton.h"
 #import "NSMutableArray+ZMutableArray.h"
 #import "NSString+ZString.h"
-#import "SimplePopupView.h"
+#import "ZAlertView.h"
 
 
 @interface MenuViewController ()
@@ -180,9 +180,8 @@
         if(self.words.countOfWords < minWords){
             
             NSString *message = [[NSString alloc] initWithFormat:NSLocalizedString(@"game.needs.at.least",nil),minWords];
-            SimplePopupView *errorPopup = [[SimplePopupView alloc] initWithTitle:NSLocalizedString(@"attention",nil) message:message delegate:nil];
+            ZAlertView *errorPopup = [[ZAlertView alloc] initWithTitle:NSLocalizedString(@"attention",nil) message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",nil) otherButtonTitles:nil];
             [errorPopup show];
-            
             response = NO;
         }
     }

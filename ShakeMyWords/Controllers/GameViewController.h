@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Language.h"
-#import "SimplePopupView.h"
 
-@interface GameViewController : UIViewController <SimplePopupViewDelegate>
+@interface GameViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) Language *firstLanguage;
 @property (weak, nonatomic) Language *secondLanguage;

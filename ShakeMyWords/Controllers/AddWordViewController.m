@@ -8,7 +8,7 @@
 
 #import "AddWordViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SimplePopupView.h"
+#import "ZAlertView.h"
 #import "Constants.h"
 #import "UIColor+ZColor.h"
 #import "NSString+ZString.h"
@@ -90,7 +90,8 @@
         
         if ([Word areWordsExistWithUids:@[firstWord.uid,secondWord.uid] context:context]) {
             NSString *message = [[NSString alloc] initWithFormat:NSLocalizedString(@"word.has.already.been.saved",nil), firstWord.text];
-            SimplePopupView *errorPopup = [[SimplePopupView alloc] initWithTitle:NSLocalizedString(@"error", nil) message:message delegate:nil];
+            
+            ZAlertView *errorPopup = [[ZAlertView alloc] initWithTitle:NSLocalizedString(@"error", nil) message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",nil) otherButtonTitles:nil];
             [errorPopup show];
             return;
         }
@@ -101,7 +102,8 @@
         [context save:&error]; // Save the word and its transaltion
         
         if(error){
-            SimplePopupView *errorPopup = [[SimplePopupView alloc] initWithTitle:NSLocalizedString(@"error", nil) message:NSLocalizedString(@"error.raised",nil) delegate:nil];
+            NSString *message = NSLocalizedString(@"error.raised",nil);
+            ZAlertView *errorPopup = [[ZAlertView alloc] initWithTitle:NSLocalizedString(@"error", nil) message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",nil) otherButtonTitles:nil];
             [errorPopup show];
             return;
         }
@@ -110,7 +112,9 @@
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }else{
-        SimplePopupView *errorPopup = [[SimplePopupView alloc] initWithTitle:NSLocalizedString(@"error", nil) message:NSLocalizedString(@"fields.can.not.be.empty",nil) delegate:nil];
+        
+        NSString *message = NSLocalizedString(@"fields.can.not.be.empty",nil);
+        ZAlertView *errorPopup = [[ZAlertView alloc] initWithTitle:NSLocalizedString(@"error", nil) message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",nil)otherButtonTitles:nil];
         [errorPopup show];
     }
 }
@@ -141,7 +145,10 @@
     if(textField == self.firstLanguageTextField){
         [self.secondLanguageTextField becomeFirstResponder];
         return NO;
+    }else{
+        [self saveWordAction:nil];
     }
+    
     return YES;
 }
 

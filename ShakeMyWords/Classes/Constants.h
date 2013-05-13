@@ -36,25 +36,6 @@ extern int const GAME_MIN_WORDS_REQUIRED;
 extern int const GAME_POPUP_NEXT_TAG_VALUE;
 
 
-// POPUP
-extern const int POPUP_BUTTON_HEIGHT;
-extern const int POPUP_BUTTON_WIDTH;
-extern const int POPUP_BUTTON_POSITION_Y;
-extern const int POPUP_BUTTON_POSITION_X;
-extern const int POPUP_MESSAGE_WIDTH;
-extern const int POPUP_MESSAGE_HEIGHT;
-extern const int POPUP_MESSAGE_POSITION_Y;
-extern const int POPUP_MESSAGE_POSITION_X;
-extern const int POPUP_TITLE_WIDTH;
-extern const int POPUP_TITLE_HEIGHT;
-extern const int POPUP_TITLE_POSITION_Y;
-extern const int POPUP_TITLE_POSITION_X;
-extern const int POPUP_WIDTH;
-extern const int POPUP_HEIGHT;
-extern const int POPUP_POSITION_Y;
-extern const int POPUP_POSITION_X;
-extern const float POPUP_INSET;
-
 // COLORS
 extern NSString * const COLOR_BLUE;
 extern NSString * const COLOR_BLUE_DARK;

@@ -5,6 +5,7 @@
 "delete" = "Supprimer";
 "next" = "Suivant";
 "error" = "Erreur";
+"ok" = "Ok";
 "french" = "français";
 "english" = "anglais";
 "the.answer.was" = "La réponse était :";

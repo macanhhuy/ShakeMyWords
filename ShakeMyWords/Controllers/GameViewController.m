@@ -13,11 +13,12 @@
 #import "Constants.h"
 #import "UIButton+ZButton.h"
 #import "UIColor+ZColor.h"
+#import "ZAlertView.h"
 
 @interface GameViewController ()
 
 @property int success;
-@property (strong,nonatomic) SimplePopupView *popup;
+@property (strong,nonatomic) ZAlertView *popup;
 @property (strong,nonatomic) Game *game;
 @property int numberRounds;
 
@@ -62,10 +63,8 @@
     }
 
     // Init the wrong answer popup.
-    self.popup = [[SimplePopupView alloc] initWithTitle:NSLocalizedString(@"the.answer.was", nil) message:nil delegate:self];
-    [self.popup.button setTitle:NSLocalizedString(@"next",nil) forState:UIControlStateNormal];
+    self.popup = [[ZAlertView alloc] initWithTitle:NSLocalizedString(@"the.answer.was", nil) message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"next",nil) otherButtonTitles:nil];
     self.popup.tag = GAME_POPUP_NEXT_TAG_VALUE;
-    self.popup.message.textColor = [UIColor colorWithHex:COLOR_RED];
 
     self.numberRounds = [[NSUserDefaults standardUserDefaults] integerForKey:DEFAULT_KEY_NUMBER_ROUNDS];
     self.game = [[Game alloc] initWithNumberOfRounds:self.numberRounds andContext:[self managedObjectContext]];
@@ -107,8 +106,9 @@
         [self updateUI];
     }
     else{ // Show a popup who indicates the game is over.
+        self.popup = nil;
         NSString *message = [[NSString alloc] initWithFormat:NSLocalizedString(@"success.rate",nil), self.game.successRate];
-        SimplePopupView *gameOverPopup = [[SimplePopupView alloc] initWithTitle:NSLocalizedString(@"game.over",nil) message:message delegate:self];
+        ZAlertView *gameOverPopup = [[ZAlertView alloc] initWithTitle:NSLocalizedString(@"game.over", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"ok",nil) otherButtonTitles:nil];
         [gameOverPopup show];
     }
 }
@@ -153,7 +153,7 @@
         [[round wordToGuess] succeedWithLanguage:self.secondLanguage context:context]; // Update Statistics
     }
     else{ // If wrong anwser
-        self.popup.message.text = [round response]; // Display response.
+        self.popup.message = [round response]; // Display response.
         [[round wordToGuess] failledWithLanguage:self.secondLanguage context:context]; // Update Statistics
         [self.popup show]; // Show error popup
     }
@@ -165,8 +165,8 @@
  *
  **/
 
-- (void)simplePopupViewClickedButton:(SimplePopupView *)simplePopupView{
-    (simplePopupView.tag == GAME_POPUP_NEXT_TAG_VALUE) ? [self nextRound] : [self backToMenu:nil]; // Check if game continues or if the game is over.
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    (alertView.tag == GAME_POPUP_NEXT_TAG_VALUE) ? [self nextRound] : [self backToMenu:nil]; // Check if game continues or if the game is over.
 }
 
 

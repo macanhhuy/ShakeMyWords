@@ -36,25 +36,6 @@ int const GAME_MIN_WORDS_REQUIRED = 3;
 int const GAME_POPUP_NEXT_TAG_VALUE = 1;
 
 
-// POPUP
-const int POPUP_BUTTON_HEIGHT = 40;
-const int POPUP_BUTTON_WIDTH = 140;
-const int POPUP_BUTTON_POSITION_Y = 124;
-const int POPUP_BUTTON_POSITION_X = 70;
-const int POPUP_MESSAGE_WIDTH = 260;
-const int POPUP_MESSAGE_HEIGHT = 32;
-const int POPUP_MESSAGE_POSITION_Y = 62;
-const int POPUP_MESSAGE_POSITION_X = 10;
-const int POPUP_TITLE_WIDTH = 260;
-const int POPUP_TITLE_HEIGHT = 32;
-const int POPUP_TITLE_POSITION_Y = 20;
-const int POPUP_TITLE_POSITION_X = 10;
-const int POPUP_WIDTH = 280;
-const int POPUP_HEIGHT = 194;
-const int POPUP_POSITION_Y = 0;
-const int POPUP_POSITION_X = 0;
-const float POPUP_INSET = 6.0f;
-
 // COLORS
 
 NSString * const COLOR_BLUE = @"2D9DF5";
