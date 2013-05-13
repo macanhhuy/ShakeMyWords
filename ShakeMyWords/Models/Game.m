@@ -168,7 +168,7 @@
  **/
 
 -(float)successRate{
-    return (self.score > 0) ? (self.score*100)/self.rounds : 0.00;
+    return (self.rounds > 0) ? (self.score*100)/self.rounds : 0.00;
 }
 
 

@@ -12,4 +12,4 @@
 "success.rate" = "%.2f%% de bonne réponses";
 "word.has.already.been.saved" = "%@ a déjà été sauvegardé !";
 "error.raised" = "Une erreur has been raised!";
-"fields.can.not.be.empty" = "les champs ne peuvent être vide !";
+"fields.can.not.be.empty" = "Les champs ne peuvent être vide !";
