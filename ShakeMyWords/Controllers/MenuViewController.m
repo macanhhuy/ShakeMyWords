@@ -67,10 +67,6 @@
     [self.wordsButton setBackgroundWithHex:COLOR_GREEN_DARK forState:UIControlStateHighlighted];
     self.wordsButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     
-    UISwipeGestureRecognizer *oneFingerSwipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(launchGame)];
-    [oneFingerSwipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [[self view] addGestureRecognizer:oneFingerSwipeLeft];
-    
     [self setUpSettings];
 }
 
@@ -105,17 +101,6 @@
     return context;
 }
 
-
-/**
- * @Method : Launch the game
- *
- **/
-
-- (void) launchGame{
-    
-    if([self shouldPerformSegueWithIdentifier:SEGUE_MENU_GAME sender:nil])
-        [self performSegueWithIdentifier:SEGUE_MENU_GAME sender:nil];
-}
 
 /**
  * @Method: Set the current words list to another controllerView.
@@ -163,6 +148,16 @@
     }
 }
 
+
+/**
+ * @Method : When swipe left
+ *
+ **/
+
+- (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
+    if([self shouldPerformSegueWithIdentifier:SEGUE_MENU_GAME sender:nil])
+        [self performSegueWithIdentifier:SEGUE_MENU_GAME sender:nil];
+}
 
 /**
  * @Method : Checks if the application have enough words for playing.

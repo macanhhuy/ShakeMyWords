@@ -21,12 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.titleScoresLabel.font= [UIFont fontWithName:FONT_LATO_BOLD size:40];
-    
-    UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backToMenu:)];
-    [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [[self view] addGestureRecognizer:oneFingerSwipeRight];
 }
 
 
@@ -52,6 +47,9 @@
  * @Method: Pop to Root View Controller
  *
  **/
+- (IBAction)swipeRight:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (IBAction)backToMenu:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];

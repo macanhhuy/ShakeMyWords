@@ -68,10 +68,6 @@
 
     self.numberRounds = [[NSUserDefaults standardUserDefaults] integerForKey:DEFAULT_KEY_NUMBER_ROUNDS];
     self.game = [[Game alloc] initWithNumberOfRounds:self.numberRounds andContext:[self managedObjectContext]];
-    
-    UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backToMenu:)];
-    [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [[self view] addGestureRecognizer:oneFingerSwipeRight];
 
     [self startGame];
 }
@@ -209,10 +205,16 @@
 }
 
 
+
 /**
  * @Method: Pop to Root View Controller
  *
  **/
+
+
+- (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (IBAction)backToMenu:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];

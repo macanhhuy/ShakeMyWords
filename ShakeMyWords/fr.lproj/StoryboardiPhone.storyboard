@@ -130,6 +130,9 @@
                             <constraint firstAttribute="trailing" secondItem="hX2-ig-hvK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ugz-97-Osw"/>
                             <constraint firstItem="Ti4-xz-Q8t" firstAttribute="leading" secondItem="tFq-JF-ajk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vbR-jk-LVL"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LQx-Ne-Ytf" appends="YES" id="TDz-fo-Lyn"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Rg9-ha-V3Q"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -142,6 +145,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNm-uI-aS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="LQx-Ne-Ytf">
+                    <connections>
+                        <action selector="swipeLeft:" destination="146-fB-Mb6" id="THI-nQ-NcQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="149" y="120"/>
         </scene>
@@ -255,6 +263,9 @@
                             <constraint firstItem="UJc-9f-Hjv" firstAttribute="leading" secondItem="nva-d1-Ur6" secondAttribute="leading" constant="11" id="rre-y0-4bP"/>
                             <constraint firstItem="5eB-zt-ogA" firstAttribute="leading" secondItem="nva-d1-Ur6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zDi-yg-b6s"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xIJ-tW-L1o" appends="YES" id="Anz-28-Ztf"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ocy-cf-Pcu"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -267,6 +278,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgl-kb-Ly8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="xIJ-tW-L1o">
+                    <connections>
+                        <action selector="swipeRight:" destination="YVY-Ok-mAL" id="f2c-Xf-R7w"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="686" y="-536"/>
         </scene>
@@ -405,6 +421,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9450981021" green="0.94117653369999998" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="eSb-sY-XHS" firstAttribute="leading" secondItem="rDw-p5-dNU" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="1tw-4l-Ngn"/>
                             <constraint firstItem="cjM-Px-igH" firstAttribute="bottom" secondItem="re9-8V-U7v" secondAttribute="bottom" type="default" id="2PY-LO-I5b"/>
@@ -433,6 +450,9 @@
                             <constraint firstItem="cjM-Px-igH" firstAttribute="centerX" secondItem="k1c-pU-mae" secondAttribute="centerX" type="default" id="vVz-5S-JPA"/>
                             <constraint firstItem="9J1-Ft-DHp" firstAttribute="trailing" secondItem="k1c-pU-mae" secondAttribute="trailing" type="default" id="vj7-Ot-dqW"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xnL-Pj-aQC" appends="YES" id="0Zu-sK-Pq5"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="m4b-mZ-6n9"/>
                     <connections>
@@ -446,6 +466,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coq-Hv-JCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="xnL-Pj-aQC">
+                    <connections>
+                        <action selector="swipeRight:" destination="QMW-W9-dbW" id="Jpp-Ap-C9T"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="686" y="697"/>
         </scene>
@@ -548,6 +573,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9450981021" green="0.94117653369999998" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="say-1N-7sa" firstAttribute="centerX" secondItem="cyM-d7-vjL" secondAttribute="centerX" type="default" id="6fe-b9-Wzm"/>
                             <constraint firstItem="say-1N-7sa" firstAttribute="centerX" secondItem="cXA-JH-xhD" secondAttribute="centerX" type="default" id="713-vF-Hb1"/>
@@ -562,6 +588,9 @@
                             <constraint firstItem="5JC-pU-Tte" firstAttribute="top" secondItem="cyM-d7-vjL" secondAttribute="top" constant="89" id="phM-Fo-Rrc"/>
                             <constraint firstItem="say-1N-7sa" firstAttribute="centerY" secondItem="9uc-mP-IPR" secondAttribute="centerY" type="default" id="qZH-VO-0AX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kyB-lu-1Ek" appends="YES" id="AJD-90-7Z8"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="81D-g8-aRi"/>
                     <connections>
@@ -570,6 +599,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OmT-hv-OPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="kyB-lu-1Ek">
+                    <connections>
+                        <action selector="swipeRight:" destination="K37-ec-toV" id="vUj-Be-Dia"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1244" y="496"/>
         </scene>
@@ -749,6 +783,9 @@
                             <constraint firstItem="WQ4-33-lMY" firstAttribute="centerX" secondItem="uh6-3b-huV" secondAttribute="centerX" type="default" id="gIX-EG-1P2"/>
                             <constraint firstItem="WQ4-33-lMY" firstAttribute="centerX" secondItem="2ud-p4-1NP" secondAttribute="centerX" type="default" id="lPU-1O-8fR"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5Pq-qf-oB1" appends="YES" id="63m-JG-CnT"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Nbf-DG-SQ1"/>
                     <connections>
@@ -756,6 +793,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lu8-pd-0d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="5Pq-qf-oB1">
+                    <connections>
+                        <action selector="swipeRight:" destination="jaO-CJ-NMW" id="dai-N8-vSI"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1244" y="-187"/>
         </scene>
@@ -812,79 +854,6 @@
         <image name="cross.png" width="32" height="32"/>
         <image name="valid@2x.png" width="64" height="64"/>
     </resources>
-    <classes>
-        <class className="AddWordViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWordViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelAddAction:" candidateClass="UIButton"/>
-                <relationship kind="action" name="saveWordAction:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="addLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstLanguageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstLanguageTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="secondLanguageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="secondLanguageTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="GameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="action" name="checkChoice:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="progressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wordToGuessLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="possibilities" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="scoresButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wordsButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ScoresTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresTableViewController.h"/>
-        </class>
-        <class className="ScoresViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleScoresLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="action" name="switchLanguages:"/>
-                <relationship kind="outlet" name="choiceLanguagesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstLanguageButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="secondLanguageButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="roundsButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="WordViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordViewCell.h"/>
-        </class>
-        <class className="WordViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="numberWordsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleWords" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="WordsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordsTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

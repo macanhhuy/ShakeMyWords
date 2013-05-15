@@ -47,11 +47,6 @@
         }
         [button addTarget:self action:@selector(updateRoundsNumber:) forControlEvents:UIControlEventTouchDown];
     }
-    
-    UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backToMenu:)];
-    [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [[self view] addGestureRecognizer:oneFingerSwipeRight];
-        
     [self updateUI];
 }
 
@@ -99,7 +94,7 @@
  *
  **/
 
-- (IBAction)switchLanguages:(id)sender {
+- (IBAction)switchLanguages:(UIButton *)sender {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -120,23 +115,30 @@
 }
 
 
-/**
- * @Method: Pop to Root View Controller
- *
- **/
-
-- (IBAction)backToMenu:(UIButton *)sender {
-    
+-(void)updateAndLeave{
     if ([self shouldUpdate]) { // If settings has been modifed, the app reload the words.
         
         id controller = [self.navigationController.viewControllers objectAtIndex:0];
-
+        
         if([controller isMemberOfClass:[MenuViewController class]]){
             MenuViewController *menuController = (MenuViewController *) controller;
             [menuController setUpSettings];
         }
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
+
+}
+
+/**
+ * @Method: Pop to Root View Controller
+ *
+ **/
+- (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
+    [self updateAndLeave];
+}
+
+- (IBAction)backToMenu:(UIButton *)sender {
+    [self updateAndLeave];
 }
 
 

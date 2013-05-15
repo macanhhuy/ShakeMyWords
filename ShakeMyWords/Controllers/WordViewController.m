@@ -35,10 +35,6 @@
     self.numberWordsLabel.font= [UIFont fontWithName:FONT_LATO_REGULAR size:14];
     self.numberWordsLabel.text = [[NSString alloc]initWithFormat:@"%d",self.words.countOfWords];
     [self.words addObserver:self forKeyPath:@"words" options:0 context:NULL];
-    
-    UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backToMenu:)];
-    [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [[self view] addGestureRecognizer:oneFingerSwipeRight];
 }
 
 /**
@@ -77,9 +73,19 @@
  * @Method: Pop to Root View Controller
  *
  **/
-- (IBAction)backToMenu:(UIButton *)sender {
+
+-(void)leave{
     [self.words removeObserver:self forKeyPath:@"words"];
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
+    [self leave];
+}
+
+
+- (IBAction)backToMenu:(UIButton *)sender {
+    [self leave];
 }
 
 
