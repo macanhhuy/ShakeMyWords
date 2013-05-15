@@ -26,8 +26,8 @@
 -(id)initWithString:(NSString *)string andDelegate:(id<ZCSVParserDelegate>)delegate{
     self = [super init];
     if(self){
-        self.content = string;
-        self.delegate = delegate;
+        _content = string;
+        _delegate = delegate;
     }
     return self;
 }

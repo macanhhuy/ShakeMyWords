@@ -19,7 +19,7 @@
 -(id)initWithArray:(NSArray *)array{
     self = [super init];
     if (self) {
-        self.words = [[NSMutableArray alloc] initWithArray:array];
+        _words = [[NSMutableArray alloc] initWithArray:array];
     }
     return self;
 }

@@ -15,23 +15,6 @@
 
 
 /**
- * @Method : Designated initializer
- *
- **/
-
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-        
-        [self setValue:[NSNumber numberWithInt:1] forKeyPath:@"_titleLabel.tag"];
-        
-    }
-    return self;
-}
-
-
-/**
  * @Method : Customize some subviews of the AlertView.
  *
  **/

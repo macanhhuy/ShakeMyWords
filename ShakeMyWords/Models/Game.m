@@ -30,9 +30,9 @@
 -(id)initWithNumberOfRounds:(int)rounds andContext:(NSManagedObjectContext *)context{
     self = [super init];
     if(self){
-        self.rounds = rounds;
-        self.context = context;
-        self.started = NO;
+        _rounds = rounds;
+        _context = context;
+        _started = NO;
     }
     return self;
 }

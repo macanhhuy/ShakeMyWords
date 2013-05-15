@@ -29,8 +29,8 @@
 -(id)initWithContext:(NSManagedObjectContext *)context{
     self = [super init];
     if (self) {
-        self.context = context;
-        self.UIDs = [[NSMutableArray alloc] initWithArray:[Word allUIDsWithContext:self.context]];
+        _context = context;
+        _UIDs = [[NSMutableArray alloc] initWithArray:[Word allUIDsWithContext:self.context]];
     }
     return self;
 }
