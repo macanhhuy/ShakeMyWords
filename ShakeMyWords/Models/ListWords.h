@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Word.h"
+#import "Word+Addon.h"
 
 @interface ListWords : NSObject
 

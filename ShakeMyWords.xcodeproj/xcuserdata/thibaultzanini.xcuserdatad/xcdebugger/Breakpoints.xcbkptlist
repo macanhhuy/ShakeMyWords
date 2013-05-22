@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShakeMyWords/Controllers/AddWordViewController.m"
-         timestampString = "389852723.051642"
+         timestampString = "390876073.152177"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "29"
-         endingLineNumber = "29"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
          landmarkName = "@implementation AddWordViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShakeMyWords/Models/Word.m"
-         timestampString = "389999101.325825"
+         timestampString = "390876073.152177"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "16"
-         endingLineNumber = "16"
+         startingLineNumber = "15"
+         endingLineNumber = "15"
          landmarkName = "@implementation Word"
          landmarkType = "3">
       </FileBreakpoint>

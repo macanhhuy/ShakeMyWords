@@ -10,4 +10,7 @@
 
 @interface WordViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *translationLabel;
+
 @end

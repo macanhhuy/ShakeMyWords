@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ListWords.h"
-#import "Language.h"
+#import "Language+Addon.h"
 
 @interface MenuViewController : UIViewController
 

@@ -8,9 +8,11 @@
 
 #import "Game.h"
 #import "Constants.h"
-#import "Language.h"
-#import "NSMutableArray+ZMutableArray.h"
 #import "ZRandom.h"
+#import "NSMutableArray+ZMutableArray.h"
+#import "Word+Addon.h"
+#import "Language+Addon.h"
+
 
 @interface Game ()
 

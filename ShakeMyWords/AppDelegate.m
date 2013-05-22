@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Language.h"
+#import "Language+Addon.h"
 #import "WordsParser.h"
 
 @implementation AppDelegate
@@ -30,7 +30,6 @@
         [context save:&error];
         
         if (!error) {
-            [defaults setBool:YES forKey:@"HasLaunchedOnce"];
             [defaults setObject:@"en" forKey:@"firstLanguage"];
             [defaults setObject:@"fr" forKey:@"secondLanguage"];
             [defaults setInteger:10 forKey:@"rounds"];
@@ -40,6 +39,8 @@
             WordsParser * delegate = [[WordsParser alloc] initWithContext:self.managedObjectContext];
             ZCSVParser *parser = [[ZCSVParser alloc] initWithFileName:@"words" andDelegate:delegate];
             [parser parse];
+            
+            [defaults setBool:YES forKey:@"HasLaunchedOnce"];
         }
     }
 

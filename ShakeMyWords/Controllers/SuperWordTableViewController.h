@@ -1,8 +1,8 @@
 //
-//  AddWordViewController.h
+//  SuperWordTableViewController.h
 //  ShakeMyWords
 //
-//  Created by Thibault Zanini on 5/6/13.
+//  Created by Thibault Zanini on 5/17/13.
 //  Copyright (c) 2013 Thibault Zanini. All rights reserved.
 //
 
@@ -10,10 +10,11 @@
 #import "ListWords.h"
 #import "Language+Addon.h"
 
-@interface AddWordViewController : UIViewController <UITextFieldDelegate>
+@interface SuperWordTableViewController : UITableViewController
 
 @property (weak,nonatomic) ListWords *words;
-@property (weak,nonatomic) Language *firstLanguage;
 @property (weak,nonatomic) Language *secondLanguage;
+
+- (NSManagedObjectContext *)managedObjectContext;
 
 @end

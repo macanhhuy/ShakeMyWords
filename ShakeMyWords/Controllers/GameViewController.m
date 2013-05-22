@@ -8,7 +8,7 @@
 
 #import "GameViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "Word.h"
+#import "Word+Addon.h"
 #import "Game.h"
 #import "Constants.h"
 #import "UIButton+ZButton.h"

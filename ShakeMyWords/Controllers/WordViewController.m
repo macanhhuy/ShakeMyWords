@@ -7,7 +7,7 @@
 //
 
 #import "WordViewController.h"
-#import "Word.h"
+#import "Word+Addon.h"
 #import "WordsTableViewController.h"
 #import "AddWordViewController.h"
 #import "Constants.h"
@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleWords;
 @property (weak, nonatomic) IBOutlet UILabel *numberWordsLabel;
+@property (strong, nonatomic) WordsTableViewController *embedController;
 
 @end
 
@@ -43,16 +44,23 @@
  **/
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    id controller = [segue destinationViewController];
+    
     if ([segue.identifier isEqualToString:SEGUE_WORDS_EMBED]) {
-        WordsTableViewController *containerController = (WordsTableViewController *)[segue destinationViewController];
-        [containerController setWords:self.words];
-        [containerController setSecondLanguage:self.secondLanguage];
+        if ([controller isMemberOfClass:[WordsTableViewController class]]) {
+            self.embedController = (WordsTableViewController *)[segue destinationViewController];
+            [self.embedController setWords:self.words];
+            [self.embedController setSecondLanguage:self.secondLanguage];
+        }
     }
     else if ([segue.identifier isEqualToString:SEGUE_WORDS_ADD]){
-        AddWordViewController *addWordController = (AddWordViewController *)[segue destinationViewController];
-        [addWordController setWords:self.words];
-        [addWordController setFirstLanguage:self.firstLanguage];
-        [addWordController setSecondLanguage:self.secondLanguage];
+        if ([controller isMemberOfClass:[AddWordViewController class]]) {
+            AddWordViewController *addWordController = (AddWordViewController *)[segue destinationViewController];
+            [addWordController setWords:self.words];
+            [addWordController setFirstLanguage:self.firstLanguage];
+            [addWordController setSecondLanguage:self.secondLanguage];
+        }
     }
 }
 
@@ -64,7 +72,11 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     if([keyPath isEqualToString:@"words"]) {
-        self.numberWordsLabel.text = [[NSString alloc] initWithFormat:@"%d",self.words.countOfWords];
+        self.numberWordsLabel.text = [[NSString alloc] initWithFormat:@"%d",[self.words countOfWords]];
+    }
+        
+    if ([[change valueForKey:NSKeyValueChangeKindKey] intValue] == NSKeyValueChangeInsertion) {
+        [self.embedController.tableView reloadData];
     }
 }
 
@@ -74,10 +86,6 @@
  *
  **/
 
--(void)leave{
-    [self.words removeObserver:self forKeyPath:@"words"];
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
     [self leave];
@@ -89,9 +97,9 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)leave{
+    [self.words removeObserver:self forKeyPath:@"words"];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

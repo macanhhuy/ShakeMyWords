@@ -483,7 +483,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9450981021" green="0.94117653369999998" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordCell" textLabel="RIz-bt-y1J" detailTextLabel="Bi0-r1-NA7" style="IBUITableViewCellStyleValue1" id="RiL-s5-Yjk" customClass="WordViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordCell" textLabel="RIz-bt-y1J" detailTextLabel="Bi0-r1-NA7" style="IBUITableViewCellStyleSubtitle" id="RiL-s5-Yjk" customClass="WordViewCell">
                                 <rect key="frame" x="0.0" y="22" width="321" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -491,13 +491,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RIz-bt-y1J">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" red="0.28235294119999998" green="0.2784313725" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.2823529541" green="0.27843138579999999" blue="0.26274511220000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Translation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bi0-r1-NA7">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.1764705882" green="0.61568627450000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" text="Translation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bi0-r1-NA7">
+                                            <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.1764705926" green="0.61568629740000003" blue="0.96078431610000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
@@ -817,7 +818,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="321" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1lT-Oa-O2m">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="1lT-Oa-O2m">
                                             <rect key="frame" x="10" y="14" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.28235294119999998" green="0.2784313725" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -854,6 +855,81 @@
         <image name="cross.png" width="32" height="32"/>
         <image name="valid@2x.png" width="64" height="64"/>
     </resources>
+    <classes>
+        <class className="AddWordViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWordViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstLanguageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstLanguageTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="secondLanguageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secondLanguageTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="GameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backToMenu:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkChoice:" candidateClass="UIButton"/>
+                <relationship kind="action" name="swipeRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="progressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wordToGuessLabel" candidateClass="UILabel"/>
+                <relationship kind="outletCollection" name="possibilities" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scoresButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wordsButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ScoresTableViewController" superclassName="SuperWordTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresTableViewController.h"/>
+        </class>
+        <class className="ScoresViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="titleScoresLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="choiceLanguagesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstLanguageButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="secondLanguageButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outletCollection" name="roundsButtons" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SuperWordTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SuperWordTableViewController.h"/>
+        </class>
+        <class className="WordViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="translationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wordLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WordViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="numberWordsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleWords" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WordsTableViewController" superclassName="SuperWordTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordsTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

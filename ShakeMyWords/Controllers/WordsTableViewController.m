@@ -7,46 +7,12 @@
 //
 
 #import "WordsTableViewController.h"
-#import "Word.h"
+#import "Word+Addon.h"
 #import "WordViewCell.h"
 #import "Constants.h"
 
 
 @implementation WordsTableViewController
-
-
-/**
- * @Method : Load Data once the view did appear.
- *
- **/
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self.tableView reloadData];
-}
-
-
-/**
- * @Method : Gets a NSManagedObjectContext from the AppDelegate
- *
- **/
-
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.words.countOfWords;
-}
 
 
 /**
@@ -99,7 +65,6 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         NSManagedObjectContext *context = [self managedObjectContext];
-        
         Word *word = [self.words objectInWordsAtIndex:indexPath.row];
 
         [context deleteObject:word];
@@ -108,14 +73,10 @@
         [context save:&error];
         
         if (!error) {
-            [self.words removeObjectFromWordsAtIndex:[indexPath row]];
+            [self.words removeObjectFromWordsAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
     } 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 @end

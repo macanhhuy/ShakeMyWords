@@ -12,9 +12,9 @@
 #import "GameViewController.h"
 #import "SettingsViewController.h"
 
-#import "Word.h"
+#import "Word+Addon.h"
 #import "Constants.h"
-#import "Language.h"
+#import "Language+Addon.h"
 #import "UIButton+ZButton.h"
 #import "NSMutableArray+ZMutableArray.h"
 #import "NSString+ZString.h"

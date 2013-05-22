@@ -7,7 +7,7 @@
 //
 
 #import "WordsParser.h"
-#import "Word.h"
+#import "Word+Addon.h"
 #import "Constants.h"
 
 @interface WordsParser ()

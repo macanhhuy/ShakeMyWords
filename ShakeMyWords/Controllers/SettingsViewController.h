@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Language.h"
+#import "Language+Addon.h"
 
 @interface SettingsViewController : UIViewController
 

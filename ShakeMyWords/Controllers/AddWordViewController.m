@@ -8,6 +8,7 @@
 
 #import "AddWordViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Word+Addon.h"
 #import "ZAlertView.h"
 #import "Constants.h"
 #import "UIColor+ZColor.h"
@@ -140,7 +141,7 @@
 }
 
 
-- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     if(textField == self.firstLanguageTextField){
         [self.secondLanguageTextField becomeFirstResponder];
@@ -152,9 +153,6 @@
     return YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 
 @end

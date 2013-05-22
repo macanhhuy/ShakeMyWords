@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C804534E17415FFD00C31010 /* ZAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C804534D17415FFD00C31010 /* ZAlertView.m */; };
+		C813F7F6174C48D400A7AD0B /* Language+Addon.m in Sources */ = {isa = PBXBuildFile; fileRef = C813F7F5174C48D400A7AD0B /* Language+Addon.m */; };
+		C813F7F9174C498600A7AD0B /* Word+Addon.m in Sources */ = {isa = PBXBuildFile; fileRef = C813F7F8174C498600A7AD0B /* Word+Addon.m */; };
+		C813F7FC174C49EA00A7AD0B /* Statistic+Addon.m in Sources */ = {isa = PBXBuildFile; fileRef = C813F7FB174C49EA00A7AD0B /* Statistic+Addon.m */; };
 		C82251851738902200EE08D3 /* words.csv in Resources */ = {isa = PBXBuildFile; fileRef = C82251841738902200EE08D3 /* words.csv */; };
 		C82251881738996100EE08D3 /* WordsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C82251871738996100EE08D3 /* WordsParser.m */; };
+		C826337B1747282D00DE1F61 /* SuperWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C826337A1747282D00DE1F61 /* SuperWordTableViewController.m */; };
 		C86A3F4717381D150093C1C7 /* arrow_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C86A3F4317381D150093C1C7 /* arrow_back.png */; };
 		C86A3F4817381D150093C1C7 /* arrow_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C86A3F4417381D150093C1C7 /* arrow_back@2x.png */; };
 		C86A3F4917381D150093C1C7 /* arrow_next.png in Resources */ = {isa = PBXBuildFile; fileRef = C86A3F4517381D150093C1C7 /* arrow_next.png */; };
@@ -85,9 +89,17 @@
 /* Begin PBXFileReference section */
 		C804534C17415FFD00C31010 /* ZAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAlertView.h; path = Views/ZAlertView.h; sourceTree = "<group>"; };
 		C804534D17415FFD00C31010 /* ZAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAlertView.m; path = Views/ZAlertView.m; sourceTree = "<group>"; };
+		C813F7F4174C48D400A7AD0B /* Language+Addon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Language+Addon.h"; path = "Models/Language+Addon.h"; sourceTree = "<group>"; };
+		C813F7F5174C48D400A7AD0B /* Language+Addon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Language+Addon.m"; path = "Models/Language+Addon.m"; sourceTree = "<group>"; };
+		C813F7F7174C498600A7AD0B /* Word+Addon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Word+Addon.h"; path = "Models/Word+Addon.h"; sourceTree = "<group>"; };
+		C813F7F8174C498600A7AD0B /* Word+Addon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Word+Addon.m"; path = "Models/Word+Addon.m"; sourceTree = "<group>"; };
+		C813F7FA174C49EA00A7AD0B /* Statistic+Addon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Statistic+Addon.h"; path = "Models/Statistic+Addon.h"; sourceTree = "<group>"; };
+		C813F7FB174C49EA00A7AD0B /* Statistic+Addon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Statistic+Addon.m"; path = "Models/Statistic+Addon.m"; sourceTree = "<group>"; };
 		C82251841738902200EE08D3 /* words.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.csv; sourceTree = "<group>"; };
 		C82251861738996100EE08D3 /* WordsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordsParser.h; path = Classes/WordsParser.h; sourceTree = "<group>"; };
 		C82251871738996100EE08D3 /* WordsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordsParser.m; path = Classes/WordsParser.m; sourceTree = "<group>"; };
+		C82633791747282D00DE1F61 /* SuperWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperWordTableViewController.h; path = Controllers/SuperWordTableViewController.h; sourceTree = "<group>"; };
+		C826337A1747282D00DE1F61 /* SuperWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperWordTableViewController.m; path = Controllers/SuperWordTableViewController.m; sourceTree = "<group>"; };
 		C86A3F4317381D150093C1C7 /* arrow_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_back.png; path = Ressources/arrow_back.png; sourceTree = "<group>"; };
 		C86A3F4417381D150093C1C7 /* arrow_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow_back@2x.png"; path = "Ressources/arrow_back@2x.png"; sourceTree = "<group>"; };
 		C86A3F4517381D150093C1C7 /* arrow_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_next.png; path = Ressources/arrow_next.png; sourceTree = "<group>"; };
@@ -358,10 +370,16 @@
 		C888F61D173C4076006E9A81 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				C813F7F4174C48D400A7AD0B /* Language+Addon.h */,
+				C813F7F5174C48D400A7AD0B /* Language+Addon.m */,
 				C888F614173C4047006E9A81 /* Language.h */,
 				C888F615173C4047006E9A81 /* Language.m */,
+				C813F7FA174C49EA00A7AD0B /* Statistic+Addon.h */,
+				C813F7FB174C49EA00A7AD0B /* Statistic+Addon.m */,
 				C888F616173C4047006E9A81 /* Statistic.h */,
 				C888F617173C4047006E9A81 /* Statistic.m */,
+				C813F7F7174C498600A7AD0B /* Word+Addon.h */,
+				C813F7F8174C498600A7AD0B /* Word+Addon.m */,
 				C888F618173C4047006E9A81 /* Word.h */,
 				C888F619173C4047006E9A81 /* Word.m */,
 			);
@@ -462,6 +480,8 @@
 		C8B60DBB171B689F0013C91D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C82633791747282D00DE1F61 /* SuperWordTableViewController.h */,
+				C826337A1747282D00DE1F61 /* SuperWordTableViewController.m */,
 				C84B20BF172EEF2A004DF5A4 /* Game */,
 				C84B20BE172EEF1E004DF5A4 /* Settings */,
 				C84B20BB172EEEE8004DF5A4 /* Menu */,
@@ -654,6 +674,10 @@
 				C888F646173C4264006E9A81 /* GameViewController.m in Sources */,
 				C888F649173C451A006E9A81 /* UIColor+ZColor.m in Sources */,
 				C804534E17415FFD00C31010 /* ZAlertView.m in Sources */,
+				C826337B1747282D00DE1F61 /* SuperWordTableViewController.m in Sources */,
+				C813F7F6174C48D400A7AD0B /* Language+Addon.m in Sources */,
+				C813F7F9174C498600A7AD0B /* Word+Addon.m in Sources */,
+				C813F7FC174C49EA00A7AD0B /* Statistic+Addon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

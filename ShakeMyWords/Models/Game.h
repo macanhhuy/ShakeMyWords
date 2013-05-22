@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Word.h"
 #import "Round.h"
 
 @interface Game : NSObject

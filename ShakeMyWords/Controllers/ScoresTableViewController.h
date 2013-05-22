@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperWordTableViewController.h"
 #import "ListWords.h"
-#import "Language.h"
+#import "Language+Addon.h"
 
-@interface ScoresTableViewController : UITableViewController
+@interface ScoresTableViewController : SuperWordTableViewController
 
-@property (weak,nonatomic) ListWords *words;
-@property (weak,nonatomic) Language *secondLanguage;
 
 @end
