@@ -50,7 +50,7 @@
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"text" ascending:YES selector:@selector(caseInsensitiveCompare:)];
     [fetchRequest setSortDescriptors:@[sort]];
     
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"language.textShort == %@", language.textShort];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"any language.textShort == %@", language.textShort];
     fetchRequest.includesPendingChanges = NO;
     
     NSError *error =nil;
@@ -125,7 +125,7 @@
     NSError *error =nil;
     [context save:&error];
     
-    return (!error) ? YES : NO;
+    return !error ? YES : NO;
 }
 
 
@@ -141,7 +141,7 @@
     NSError *error =nil;
     [context save:&error];
     
-    return (!error) ? YES : NO;
+    return !error ? YES : NO;
 }
 
 
