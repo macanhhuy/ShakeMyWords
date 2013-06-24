@@ -11,7 +11,8 @@
 @implementation Language (Addon)
 
 /**
- * @Method: Creates and returns a new Language entity.
+ * @Method: Creates and returns a new Language Entity.
+ * 
  *
  **/
 
